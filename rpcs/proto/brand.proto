@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package brand.v1;
+
+option go_package = "/pb";
+
+service BrandService {
+  rpc ListBrand(ListBrandReq) returns(ListBrandRes) {}
+}
+
+message ListBrandReq {}
+
+message ListBrandRes { repeated Brand brands = 1; }
+
+message Brand {
+  int32 id = 1;
+  string invoice_number = 2;
+  string customer = 4;
+  int32 quantity = 7;
+  int32 shop_item_id = 8;
+  string status = 11;
+  string customer_contact_number = 13;
+}

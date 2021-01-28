@@ -1,0 +1,9 @@
+app:
+  port:
+    8000
+  graceful_timeout:
+    30
+mongo:
+  url: mongo:27017
+  db_name: boilerplate
+  time_out: 30
